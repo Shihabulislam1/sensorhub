@@ -25,6 +25,7 @@
     { "action": "shell", "resource": "*--force*", "effect": "deny" },
     { "action": "shell", "resource": "*.env*", "effect": "deny" },
 
-    { "action": "webfetch", "resource": "*", "effect": "ask" }
+    { "action": "webfetch", "resource": "*", "effect": "ask" },
+    { "action": "shell", "resource": "git merge *", "effect": "deny" }
   ]
 }
