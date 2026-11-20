@@ -6,9 +6,10 @@
     "node": ">=22"
   },
   "scripts": {
-    "build": "echo \"nothing to build yet (cp-1-config)\"",
+    "build": "pnpm -r --if-present build",
+    "build:shared": "pnpm --filter @sensorhub/shared build",
     "dev": "pnpm -r --parallel dev",
-    "test": "echo \"no tests yet (cp-1-config)\"",
+    "test": "pnpm -r --if-present test",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.0",
+    "@types/node": "22.20.5",
     "eslint": "^10.15.0",
     "globals": "^17.0.0",
     "prettier": "^3.10.1",
