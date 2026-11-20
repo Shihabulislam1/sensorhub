@@ -67,6 +67,9 @@ Run from the repo root unless noted.
 - TypeScript strict everywhere. No `any`, no `@ts-ignore`.
 - Small, focused changes. Don't reformat files you didn't otherwise touch.
 - Keep seed and demo data fake. This app can be public on the internet via Tailscale Funnel.
+- Every new environment variable must be documented in `.env.example` with a safe local default and
+  read with a fallback in code. Never require a secret for local development, and never read the
+  real `.env` (hard rule 1).
 
 ## Hard rules (never break these)
 
